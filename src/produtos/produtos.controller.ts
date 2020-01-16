@@ -29,8 +29,8 @@ export class ProdutosController {
         return this.service.updateProduto(produto);
     }
 
-    @Delete()
-    deleteProduto(@Body() produto: ProdutoEntity) {
-        return this.service.deleteProduto(produto);
+    @Delete(':id')
+    deleteProduto(@Param() params) {
+        return this.service.deleteProduto(params.id);
     }
 }
