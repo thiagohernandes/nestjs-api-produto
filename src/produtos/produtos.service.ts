@@ -16,7 +16,7 @@ export class ProdutosService {
     getProdutoById(pId: number): Promise<ProdutoEntity[]> {
         return this.produtosRepository.find({
             select: ['id', 'descricao', 'qtd', 'valor'],
-            where: [{'id': pId}],
+            where: [{id: pId}],
         });
     }
 
@@ -28,7 +28,7 @@ export class ProdutosService {
         this.produtosRepository.save(produto);
     }
 
-    deleteProduto(produto: ProdutoEntity) {
-        this.produtosRepository.delete(produto);
+    deleteProduto(id: number) {
+        this.produtosRepository.delete(id);
     }
 }
