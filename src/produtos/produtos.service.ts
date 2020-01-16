@@ -28,7 +28,7 @@ export class ProdutosService {
         this.produtosRepository.save(produto);
     }
 
-    deleteProduto(produto: ProdutoEntity) {
-        this.produtosRepository.delete(produto);
+    deleteProduto(id: number) {
+        this.produtosRepository.delete(id);
     }
 }
