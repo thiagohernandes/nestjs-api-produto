@@ -32,13 +32,7 @@
         "valor": 45.33
     }
   </h6>
-  <h5 style="color: blue">[DELETE] http://localhost:3000/produtos </h5>
-  Body
-  {
-        "id": 32,
-        "descricao": "teste",
-        "qtd": 900,
-        "valor": 45.33
-    }
+  <h5 style="color: blue">[DELETE] http://localhost:3000/produtos/:id </h5>
+  
   </h6>
 </p>
