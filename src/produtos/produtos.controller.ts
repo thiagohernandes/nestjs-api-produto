@@ -1,7 +1,9 @@
-import { Controller, Get, Param, Post, Body, Put, Delete } from '@nestjs/common';
+import { Controller, Get, Param, Post, Body, Put, Delete, UseInterceptors } from '@nestjs/common';
 import { ProdutosService } from './produtos.service';
 import { ProdutoEntity } from './produto.entity';
+import { LoggingInterceptor } from 'src/interceptors/logging.interceptor';
 
+@UseInterceptors(LoggingInterceptor)
 @Controller('produtos')
 export class ProdutosController {
 

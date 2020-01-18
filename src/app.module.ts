@@ -2,6 +2,8 @@ import { Module } from '@nestjs/common';
 import { ProdutosModule } from './produtos/produtos.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ProdutoEntity } from './produtos/produto.entity';
+import { AuthModule } from './auth/auth.module';
+import { User } from './auth/user.entity';
 
 @Module({
   imports: [
@@ -12,10 +14,11 @@ import { ProdutoEntity } from './produtos/produto.entity';
       username: 'root',
       password: 'shtkal',
       database: 'dbprodutos',
-      entities: [ProdutoEntity],
+      entities: [ProdutoEntity, User],
       synchronize: true,
     }),
     ProdutosModule,
+    AuthModule,
   ]
 })
 export class AppModule {

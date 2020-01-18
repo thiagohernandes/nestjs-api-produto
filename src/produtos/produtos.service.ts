@@ -16,7 +16,7 @@ export class ProdutosService {
     getProdutoById(pId: number): Promise<ProdutoEntity[]> {
         return this.produtosRepository.find({
             select: ['id', 'descricao', 'qtd', 'valor'],
-            where: [{'id': pId}],
+            where: [{id: pId}],
         });
     }
 
