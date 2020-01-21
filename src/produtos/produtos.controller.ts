@@ -1,7 +1,9 @@
-import { Controller, Get, Param, Post, Body, Put, Delete, UseInterceptors } from '@nestjs/common';
+import { Controller, Get, Param, Post, Body, Put, Delete, UseInterceptors, UseGuards, Res } from '@nestjs/common';
 import { ProdutosService } from './produtos.service';
 import { ProdutoEntity } from './produto.entity';
 import { LoggingInterceptor } from 'src/interceptors/logging.interceptor';
+import { AuthGuard } from '@nestjs/passport';
+import { PassportModule } from '@nestjs/passport';
 
 @UseInterceptors(LoggingInterceptor)
 @Controller('produtos')
@@ -11,6 +13,7 @@ export class ProdutosController {
 
     }
 
+    @UseGuards(AuthGuard('jwt'))
     @Get('todos')
     getAllProdutos() {
         return this.service.findAllProdutos();

@@ -1,4 +1,4 @@
-import { Module } from '@nestjs/common';
+import { Module, MiddlewareConsumer, NestModule } from '@nestjs/common';
 import { ProdutosModule } from './produtos/produtos.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ProdutoEntity } from './produtos/produto.entity';
