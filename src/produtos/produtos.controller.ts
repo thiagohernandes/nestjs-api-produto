@@ -13,7 +13,7 @@ export class ProdutosController {
 
     }
 
-    @UseGuards(AuthGuard('jwt'))
+   // @UseGuards(AuthGuard('jwt'))
     @Get('todos')
     getAllProdutos() {
         return this.service.findAllProdutos();
