@@ -19,6 +19,11 @@ export class ProdutosController {
         return this.service.findAllProdutos();
     }
 
+    @Get('builder')
+    getAllProdutosQueryBuilder() {
+        return this.service.findAllProdutosQueryBuilder();
+    }
+
     @Get(':id')
     getProdutoById(@Param() params) {
         return this.service.getProdutoById(params.id);

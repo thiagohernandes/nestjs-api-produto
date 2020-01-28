@@ -1,0 +1,26 @@
+config:
+    target: "http://localhost:3000/produtos"
+    phases:
+      - duration: 60 # 60 seconds
+        arrivalRate: 1000 # user per second
+scenarios:
+    - flow:
+       # - get:
+        #    url: "/14013"
+        - get:
+            url: "/todos"
+        #- post:
+         #   url: "/"
+         #   json: 
+          #      descricao: "teste artillery"
+           #     qtd: 22
+            #    valor: 45.44
+        #- put:
+         #   url: "/"
+          #  json: 
+           #     id: 14013
+            #    descricao: "artillery"
+             #   qtd: 3
+              #  valor: 3.44
+        # - delete:
+          #  url: "/14012"

@@ -13,6 +13,12 @@ export class ProdutosService {
         return await this.produtosRepository.find();
     }
 
+    async findAllProdutosQueryBuilder(): Promise<ProdutoEntity[]> {
+        const query = this.produtosRepository.createQueryBuilder('produtos');
+        query.andWhere('produtos.id < 39');
+        return await query.getMany();
+    }
+
     getProdutoById(pId: number): Promise<ProdutoEntity[]> {
         return this.produtosRepository.find({
             select: ['id', 'descricao', 'qtd', 'valor'],
