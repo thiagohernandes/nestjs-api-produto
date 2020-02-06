@@ -7,10 +7,9 @@
 
 <p>
   SQL - Database
-  ```
   CREATE DATABASE dbprodutos;
-  ```
-  ```
+</p>
+<p>
   CREATE TABLE `tbl_produtos` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `descricao` varchar(150) NOT NULL,
@@ -18,7 +17,6 @@
   `valor` decimal(5,2) NOT NULL DEFAULT '0.00',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=123 DEFAULT CHARSET=latin1
-  ```
 </p>
 
 <p>
