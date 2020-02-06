@@ -6,6 +6,22 @@
 </p>
 
 <p>
+  SQL - Database
+  ```
+  CREATE DATABASE dbprodutos;
+  ```
+  ```
+  CREATE TABLE `tbl_produtos` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `descricao` varchar(150) NOT NULL,
+  `qtd` int(11) NOT NULL,
+  `valor` decimal(5,2) NOT NULL DEFAULT '0.00',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=123 DEFAULT CHARSET=latin1
+  ```
+</p>
+
+<p>
  <h5>$ npm install</h5>
  <h5>$ npm start run:dev</h5> 
 </p>
